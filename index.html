@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>License</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<form action="" name="licenses" onsubmit="return false;" oninput="licenseSum()">
+		<ul class="check">
+			<li>
+				<input type="radio" name="lic" id="lic1"><label for="lic1">Licenseplan#1<span id="lic11">$13 per license</span></label> 
+			</li>
+			<li>
+				<input type="radio" name="lic" id="lic2"><label for="lic2">Licenseplan#2 <span>$22 per license</span></label> 
+			</li>
+			<li>
+				<input type="radio" name="lic" id="lic3"><label for="lic3">Licenseplan#3 <span>$34 per license</span></label>
+			</li>
+		</ul>
+
+		<div class="num-lic">	
+			<label for="sum">Number of licenses: </label>
+			<span><select id="sum" name="sum"></select></span>
+		</div>
+		
+		<div class="total">
+			Total: <output id="result"></output> <br>	
+			<button type="submit">Buy now</button>
+		</div>
+	   
+	   <div class="selected">
+	   		Selected plan: <output id="plan"></output> 
+	   	</div>
+	</form>
+
+	<script src="main.js"></script>
+</body>
+</html>

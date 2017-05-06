@@ -1,0 +1,181 @@
+* {margin:0; padding:0}
+/*font-family: 'Muli', sans-serif;*/@import url('https://fonts.googleapis.com/css?family=Muli:300i,400,600,700,800,900');
+@font-face {
+	font-family: 'Bebas';
+	src: url('fonts/bebas.eot');
+	src: url('fonts/bebas.woff') format('woff'), 
+	url('fonts/bebas.ttf') format('truetype'), 
+	url('fonts/bebas.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {font-family: 'Muli', sans-serif;}
+
+form {
+	width: 500px; 
+	margin: 20px auto 0 auto; padding: 40px 20px;
+	background: #f8f8f8;
+	border: 13px solid #ebebeb;
+}
+
+ul {
+	list-style: none;
+	padding-bottom: 10px;
+	color: #818181;
+	font: 300 18px 'Bebas', sans-serif;
+	text-transform: uppercase;
+}
+ul li {
+	padding: 0 15px;
+	display: block; 
+	border: 1px solid rgba(0,0,0,0);
+	overflow:hidden;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out
+}
+ul li:hover, li.active {
+	background: #ebf4f7;
+	border: 1px solid #b8d7e2;
+}
+ul li label {
+	display: inline-block;
+	width: 400px;
+	padding: 15px 0 15px 55px;
+	margin-left: 10px;
+	letter-spacing: 0.5px;
+	cursor: pointer;
+}
+ul li label span {
+	float: right;
+	font: 500 16px 'Muli', sans-serif;
+	text-transform: none;
+}
+
+/*Styles fot check li inputbuttons*/
+.check li input {
+  vertical-align: top;
+  width: 17px; height: 17px;
+  margin: 0 20px 0 0;
+}
+.check li input + label {
+  cursor: pointer;
+}
+.check li input:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.check li input:not(checked) + label {
+  position: relative;
+}
+.check li input:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 12px; left: 0;
+  width: 23px; height: 23px;
+  border: 5px solid #dadada;
+  border-radius: 50%;
+  background: #fbfbfb;
+}
+.check li input:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: 22px; left: 10px;
+  width: 13px; height: 13px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #0294bf;
+  opacity: 0;
+  transition: all .2s;
+}
+.check li input:checked + label:after {
+  opacity: 1;
+}
+.check li input:checked + label:before {
+	border-color: #34648e;
+}
+
+/*Number of licenses*/
+.num-lic {
+	padding: 30px 0;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	text-align: center;
+}
+.num-lic label {
+	margin-right: 10px;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+.num-lic span {
+	position: relative;
+	display: inline-block;
+}
+.num-lic span:after {
+	content: "▼";
+	position: absolute;
+	height: 100%;
+    padding: 0 8px;
+    top: 9px; right: 0;
+    font-size: 9px;
+    text-align: center;
+    pointer-events: none;
+    z-index: 1;
+}
+.num-lic #sum {
+	display: inline-block;
+	width: 60px; height: 30px;
+	border: 2px solid #8bade4;
+	border-radius:2px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	z-index: 1;
+}
+
+/*Total*/
+.total {
+	margin: 30px 0;
+	color: #777;
+	font:300 22px 'Bebas', sans-serif;
+	text-align: center;
+}
+.total output {
+	margin-left: 5px;
+	color: #3388a8;
+}
+.total sup {
+	font-size: 12px;
+}
+.total button {
+	margin-top: 15px;
+	padding: 15px 60px;
+	background: #33a845;
+	border: none;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	color: #fff;
+	font-size: 16px; 
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.total button:hover {
+	background: #34648e;
+}
+
+/*Selected*/
+.selected {
+	font-size: 20px;
+	color: #5a9eb8;
+	text-align: center;
+	letter-spacing: 0.5px;
+}
