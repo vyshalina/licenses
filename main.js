@@ -24,15 +24,7 @@ request.onreadystatechange = function(e) {
     }
 }
 function licenseSum () {
-	//sum price
-	var a = document.licenses.lic.value;
-	var b = document.licenses.sum.value;
-
-	var x = a*b;
-
-	//Output the result
-	document.getElementById('result').innerHTML = '$' + x + "<sup>US</sup>";
-
+	
     //add number for allotted license
 	if (document.getElementById('lic1').checked==true) {document.getElementById('plan').innerHTML = '#1';} else {' '}
 	if (document.getElementById('lic2').checked==true) {document.getElementById('plan').innerHTML = '#2';} else {' '}
@@ -46,6 +38,14 @@ function licenseSum () {
         }
         else {check[i].parentElement.classList.remove("active");}
     }
+    //sum price
+	var a = document.licenses.lic.value;
+	var b = document.licenses.sum.value;
+
+	var x = a*b;
+
+	//Output the result
+	document.getElementById('result').innerHTML = "$ "+ x + "<sup>US</sup>";
 }
 request.send(null);
 
